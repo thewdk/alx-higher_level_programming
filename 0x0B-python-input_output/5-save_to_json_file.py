@@ -1,8 +1,12 @@
 #!/usr/bin/python3
-"""initializate"""
+"""
+
+- Save JSON to file
+"""
 import json
 
 
-def to_json_string(my_obj):
-    """JSON representation of an object (string)"""
-    return json.dumps(my_obj)
+def save_to_json_file(my_obj, filename):
+    """Saves JSON to file"""
+    with open(filename, "w", encoding="utf-8") as json_file:
+        json.dump(my_obj, json_file)
