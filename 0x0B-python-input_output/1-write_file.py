@@ -2,12 +2,10 @@
 """initializate"""
 
 
-def number_of_lines(filename=""):
-    """function that returns the number of lines of a text file"""
-
-    num = 0
-    with open(filename, encoding="utf-8") as f:
-        line = f.readlines()
-        num = len(line)
+def write_file(filename="", text=""):
+    """function that writes a string to a text file (UTF8)
+     and returns the number of characters written"""
+    with open(filename, 'w', encoding="utf-8") as f:
+        f.write(text)
     f.close()
-    return num
+    return len(text)
