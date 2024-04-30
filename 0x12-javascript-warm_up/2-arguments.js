@@ -7,3 +7,4 @@ if (argCount === 0) {
 } else {
   console.log('Argument found');
 }
+
